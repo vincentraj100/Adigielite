@@ -1,0 +1,47 @@
+<div class="work-item" id="#=ID#">
+    <div class="position-left">
+        <img src="${image}?height=50&width=50&mode=crop" style="" />
+    </div>
+    <div class="position-right">
+        # if (status=="I") { #
+        <div class="itemliststyle-status">WIP</div>
+        <i class="fa fa-refresh fa-2x itemliststyle-status-icon" />
+        # } else if (status=="R"){ #
+        <div class="itemliststyle-status">Ready</div>
+        <i class="fa fa-check-circle-o fa-2x itemliststyle-status-icon" />
+        # } #   
+    </div>
+    <div class="position-center">
+        <div class="itemliststyle-brand">${brand}</div>
+        <div class="itemliststyle-model">${model}</div>
+        <div class="itemliststyle-plate">${plate}</div>
+
+        <div id="garage-detail#=ID#" class="garage-detail">
+            <label class="customername">${CustomerName}</label>
+            <label class="customernumber">${PhoneNumber}</label>
+            <div class="job_detail">
+                <span>Job</span>
+                <ul class="job_list">
+                    # for(var i=0; i<Job.length; i++) {#
+                        <li class="fa fa-chevron-right"><label>${Job[i]}</label></li>
+                    # } #
+                </ul>
+            </div>
+            <label class="cost">Estimation: <span>${Estimation}</span></label>
+        </div>
+        <div class="downArrow">
+            <img src="./../css/images/downArrow.png" data-garageid="#=ID#" class="downarrow" alt="Mountain View" style="">
+        </div>
+    </div>
+    <div>
+
+        <!-- <ul style="list-style:none;padding-left:12px;">
+         # for (var i=0; i<Job.length; i++) { #
+             <li class="orderjoblist">
+            <span class="fa fa-chevron-right jobicon"></span><span>${Job[i]}</span>
+             </li>
+            # } # 
+        </ul>-->
+    </div>
+
+</div>

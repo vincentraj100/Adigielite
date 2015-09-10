@@ -1,0 +1,9 @@
+ .full-height {
+   display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+}
+         
+ .middle-align{
+     width:100%;
+ }

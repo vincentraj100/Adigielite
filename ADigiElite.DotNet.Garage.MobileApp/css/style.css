@@ -1,0 +1,658 @@
+body
+{
+    background-image: url("/images/Background.png");
+    background-size: 100% auto;
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+}
+
+#menu h2
+{
+    font-size: 1em;
+    text-transform: uppercase;
+    padding: 5px 10px;
+}
+
+.ui-content
+{
+    padding: 0 !important;
+}
+
+.ui-listview
+{
+    margin: 0 !important;
+}
+
+.example-wrapper, .example-wrapper div.iscroll-scroller
+{
+    width: 100% !important;
+}
+
+.product h3
+{
+    font-size: 1.3em;
+    line-height: 1.4em;
+    margin: 0;
+    padding: 0;
+    height: 1.3em;
+    overflow: hidden;
+}
+
+.product p
+{
+    font-size: 1em;
+    margin: 0;
+    padding: .3em 0 0;
+}
+
+.pullImage
+{
+    width: 100%;
+    border-radius: 3px;
+    /* Safari 3-4, iOS 1-3.2, Android 1.6- */
+    -webkit-border-radius: 3px;
+    /* Firefox 1-3.6 */
+    -moz-border-radius: 3px;
+    float: left;
+    margin-right: 10px;
+}
+
+.garage
+{
+    width: 100%;
+    display: block;
+    background: #333333;
+    display: inline-block;
+}
+
+.garageImage
+{
+    vertical-align: central;
+    text-align: center;
+    float: left;
+    width: 25%;
+    display: inline-block;
+}
+
+.garageContent
+{
+    width: 75%;
+    float: left;
+    vertical-align: top;
+    font-size: 10px;
+}
+
+.garageInfo
+{
+    width: 75%;
+    float: left;
+}
+
+.garageProgress
+{
+    width: 25%;
+    float: right;
+    text-align: center;
+    vertical-align: top;
+}
+
+.garageImg
+{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.garageProgressIcon
+{
+    width: 30%;
+    height: 30%;
+}
+
+.km-filter-form
+{
+    display: block;
+}
+
+.SearchPanel
+{
+    width: 100%;
+    height: 30px;
+}
+
+.filterBox
+{
+    width: 70%;
+    float: right;
+}
+
+#listFilter
+{
+    border: 0;
+    background: #ffffff;
+    color: #000000;
+    height: 30px;
+    width: 80%;
+    z-index: 99999;
+}
+
+.menuIcon
+{
+    width: 30%;
+    float: left;
+}
+
+.km-android .km-listview-wrapper
+{
+    padding: 0px;
+}
+
+.listviewstyle
+{
+    z-index: 0;
+    /*margin-top: 80px;*/
+    background: transparent;
+}
+
+.km-widget, .km-content, .km-scroll-wraper
+{
+    background: transparent;
+}
+
+.km-android, .km-android .km-header, .km-android .km-footer, .km-android .km-content, .km-android .km-pane, .km-android .km-scroll-header .km-group-title, .km-android input[type=password], .km-android input[type=search], .km-android input[type=number], .km-android input[type=tel], .km-android input[type=url], .km-android input[type=email], .km-android input[type=text]:not(.k-input), .km-root .km-android textarea
+{
+    background: transparent;
+}
+
+.appmenustyle
+{
+    width: 14%;
+    height: 40px;
+    text-align: center;
+    padding: 4px;
+    float: left;
+}
+
+.searchbox
+{
+    width: 83%;
+    float: left;
+    padding-top: 4px;
+}
+
+km-android input[type=password], .km-android input[type=search], .km-android input[type=number], .km-android input[type=tel], .km-android input[type=url], .km-android input[type=email], .km-android input[type=text]:not(.k-input), .km-root .km-android textarea
+{
+    outline-width: 0;
+    outline-style: none;
+    outline-offset: 0;
+    background: white;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    /* Safari 3-4, iOS 1-3.2, Android 1.6- */
+    -webkit-border-radius: 5px;
+    /* Firefox 1-3.6 */
+    -moz-border-radius: 5px;
+    box-shadow: 0 0 5px #DDD inset;
+    color: #478CCD;
+    outline: none;
+    height: 35px;
+}
+
+.searchTextBox
+{
+    width: 97%;
+    background: #ffffff;
+}
+
+
+/*****  Nivesh  ******/
+.setone
+{
+    margin-top: 40px;
+}
+
+.menuimg
+{
+    vertical-align: middle;
+    width: 9%;
+    padding-right: 10px;
+}
+
+.addimg
+{
+    vertical-align: middle;
+    width: 13%;
+    padding-left: 10px;
+}
+
+.inputbox
+{
+    width: 65%;
+}
+
+#customer
+{
+}
+
+    #customer li
+    {
+        background: rgba(0, 0, 0, 0.2) !important;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        -webkit-background-size: 100% auto;
+        -moz-background-size: 100% auto;
+        color: white;
+        font-family: Arial;
+        font-size: 16px;
+        font-weight: bold;
+        padding-left: 0px!important;
+        line-height: 46px !important;
+        margin-left: 3px;
+        margin-right: 3px;
+        border-radius: 8px;
+        /* Safari 3-4, iOS 1-3.2, Android 1.6- */
+        -webkit-border-radius: 8px;
+        /* Firefox 1-3.6 */
+        -moz-border-radius: 8px;
+        margin-bottom: 3px;
+    }
+ 
+
+.customerlistback
+{
+}
+
+.rightarrow
+{
+    float: right;
+    margin-right: 10px;
+    width: 12px;
+    color:#333333;   
+    border: none;
+}
+
+.ingarge
+{
+    background-image: url("../../Images/ingarge.png") !important;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    color: white;
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: bold;
+    float: left;
+    width: 98%;
+    cursor: pointer;
+    margin-left: -4px;
+    line-height: 46px!important;
+}
+
+.innerimage
+{
+    width: 62%;
+    border-radius: 4px;
+    /* Safari 3-4, iOS 1-3.2, Android 1.6- */
+    -webkit-border-radius: 4px;
+    /* Firefox 1-3.6 */
+    -moz-border-radius: 4px;
+    margin: 13px;
+}
+
+.ingargecenter
+{
+    float: right;
+    margin-right: 86px;
+    margin-top: 0px;
+    width: 33%;
+}
+
+.gargetext
+{
+    margin: 0px;
+    font-size: 16px;
+}
+
+.downarrow
+{
+    width: 25px;
+}
+
+.status
+{
+    width: 52%;
+}
+
+.statustext
+{
+    font-size: 14px;
+    margin: 0 0 0px 0px;
+    opacity: 0.55;
+    text-align: center;
+}
+
+.firstingarge, .secondingarge
+{
+    float: left;
+    width: 37%;
+}
+
+.secondingarge
+{
+    line-height: 16px !important;
+    margin-top: 14px;
+}
+
+.thirdingarge
+{
+    float: right;
+    width: 25%;
+    text-align: center;
+}
+
+h3.gargetext
+{
+    color: #4c4b4b;
+}
+
+p.gargetext
+{
+    color: #595858;
+    font-style: italic;
+}
+
+p.gargetext1
+{
+    color: white;
+    margin: 0px;
+}
+/* Subash Styles*/
+
+.product h3
+{
+    font-size: 1.3em;
+    line-height: 1.4em;
+    margin: 0;
+    padding: 0;
+    height: 1.3em;
+    overflow: hidden;
+}
+
+.product p
+{
+    font-size: 1em;
+    margin: 0;
+    padding: .3em 0 0;
+}
+
+.pullImage
+{
+    width: 100%;
+    border-radius: 3px;
+    /* Safari 3-4, iOS 1-3.2, Android 1.6- */
+    -webkit-border-radius: 3px;
+    /* Firefox 1-3.6 */
+    -moz-border-radius: 3px;
+    float: left;
+    margin-right: 10px;
+}
+
+.garage
+{
+    width: 100%;
+    display: block;
+    background: #333333;
+    display: inline-block;
+}
+
+.garageImage
+{
+    vertical-align: central;
+    text-align: center;
+    float: left;
+    width: 25%;
+    display: inline-block;
+}
+
+.garageContent
+{
+    width: 75%;
+    float: left;
+    vertical-align: top;
+    font-size: 10px;
+}
+
+.garageInfo
+{
+    width: 75%;
+    float: left;
+}
+
+.garageProgress
+{
+    width: 25%;
+    float: right;
+    text-align: center;
+    vertical-align: top;
+}
+
+.garageImg
+{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.garageProgressIcon
+{
+    width: 30%;
+    height: 30%;
+}
+
+.downArrow
+{
+    width: 100%;
+    text-align: center;
+}
+
+h3, p
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+#garage:first-child, #customer:first-child, #order:first-child, .customerEdit:first-child
+{
+    /*margin-top: 85px;*/
+}
+
+
+/* Customer Edit */
+.texboxv3
+{
+    border: 1px solid !important;
+    border-radius: 4px;
+    /* Safari 3-4, iOS 1-3.2, Android 1.6- */
+    -webkit-border-radius: 4px;
+    /* Firefox 1-3.6 */
+    -moz-border-radius: 4px;
+    width: 67% !important;
+}
+
+.km-content.km-widget.km-scroll-wrapper.km-insetcontent
+{
+    background-image: url("../../../Images/v3.png");
+}
+
+.labelname, h3
+{
+    color: #515151;
+    font-weight: bold;
+    font-size: 1.0em;
+}
+
+.texboxv3
+{
+    background-color: white !important;
+}
+
+.km-ios7 .km-list > li:last-child
+{
+    box-shadow: none;
+}
+
+*
+{
+    font-family: Arial;
+}
+
+h2
+{
+    padding: 0 0 5px 5px;
+}
+
+    h2 a
+    {
+        color: #224f99;
+    }
+
+a
+{
+    color: #999;
+    text-decoration: none;
+}
+
+    a:hover
+    {
+        color: #802727;
+    }
+
+p
+{
+    padding: 0 0 5px 0;
+}
+
+input
+{
+    background-color: transparent !important;
+    border: 0 solid #999;
+    border-radius: 4px;
+    /* Safari 3-4, iOS 1-3.2, Android 1.6- */
+    -webkit-border-radius: 4px;
+    /* Firefox 1-3.6 */
+    -moz-border-radius: 4px;
+    padding: 5px;
+}
+
+#addScnt
+{
+}
+
+.removebutton
+{
+    vertical-align: middle;
+    width: 9%;
+    margin-left: 80px;
+}
+
+
+/* Customer edit end*/
+
+.editInputStyle
+{
+    background: url('../../../Images/whitebackground.jpg')no-repeat;
+    width: 66%;
+    margin-right: 5px;
+}
+
+
+/* Login Screen */
+
+.loginPanel {
+	border-radius: none;
+	text-align: center;
+	width: 100%;
+	 margin-top: 17px;
+}
+.loginPanel input {
+	background: #ffffff;
+	width: 90%;
+	border-radius: none;
+	background-color: #fff/*{a-body-background-color}*/;
+	border-color: #ddd/*{a-body-border}*/;
+	color: #333/*{a-body-color}*/;
+	text-shadow: 0/*{a-body-shadow-x}*/1px/*{a-body-shadow-y}*/0/*{a-body-shadow-radius}*/#f3f3f3/*{a-body-shadow-color}*/;
+}
+.loginPanel div {
+	background: transparent;
+	border-width: none;
+	border-style: none;
+	box-shadow: none;
+	margin-bottom:30px;
+}
+.loginPanel .ui-focus {
+	border: none;
+	box-shadow: none;
+}
+
+.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
+	background: transparent;
+}
+.fbg {
+	position: absolute;
+	left: 0;
+	z-index: -1;
+}
+.loginRibbon {
+	width: 14%;
+	margin-left: 20px;
+	float: left;
+	
+}
+.imgstyle {
+	width: 100%;
+}
+.lgn-topcss {
+	background: url(../images/login-bg-m.png) repeat-x;
+	background-size: 370px;
+	height: 39px;
+	font-size:25px;
+	color:#fff;
+	font-weight:bold;
+	text-align:center;
+	text-shadow: none;
+}
+.logoRibbon {
+	z-index: 9999;
+	margin-top: -10px;
+}
+.topbg {
+	height: 39px;
+}
+.loginBanner {
+	width: 70%;
+	float: left;
+}
+.loginAction{
+	float:left;
+	width:30%;
+	margin: 1em 0;
+	text-align:center;
+}
+.loginActionleft
+{
+	width:70%;
+	float:left;
+}
+.lgnBtn{
+	width:35%;
+}
+.rememberIcon{
+	width:85%;
+}
+.collumn{
+	width:50%;
+	margin: 1em 0;
+	float:left;
+}

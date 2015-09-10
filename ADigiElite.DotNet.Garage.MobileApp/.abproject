@@ -1,0 +1,40 @@
+{
+  "ProjectName": "ADigiEliteGarage",
+  "ProjectGuid": "e53b2c6f-ee7b-4098-b83f-e76cab18fe2a",
+  "projectVersion": 1,
+  "AppIdentifier": "com.telerik.ADigiEliteGarage",
+  "DisplayName": "ADigiEliteGarage",
+  "Author": "",
+  "Description": "",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
+  "FrameworkVersion": "3.5.0",
+  "AndroidPermissions": [],
+  "DeviceOrientations": [
+    "Portrait",
+    "Landscape"
+  ],
+  "AndroidHardwareAcceleration": "false",
+  "iOSStatusBarStyle": "Default",
+  "Framework": "Cordova",
+  "WP8TileTitle": "",
+  "WP8Publisher": "",
+  "WP8Capabilities": [],
+  "WP8Requirements": [],
+  "WP8PublisherID": "{8a9d4fe7-1f5c-4f5f-b2f5-34720d513b8c}",
+  "WP8ProductID": "{9271f15f-6917-4012-9ee3-3c845d233ba3}",
+  "WPSdk": "8.0",
+  "WP8SupportedResolutions": [
+    "ID_RESOLUTION_WVGA",
+    "ID_RESOLUTION_WXGA",
+    "ID_RESOLUTION_HD720P"
+  ],
+  "WP8WindowsPublisherName": "CN=Telerik",
+  "WP8PackageIdentityName": "1234Telerik.com.telerik.ADigiEliteGarage"
+}

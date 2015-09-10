@@ -1,0 +1,46 @@
+﻿
+@font-face {
+  font-family: 'play'; 
+  src: url('fonts/Play-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.mg-nav .fa
+{
+    line-height: 22px;
+}
+
+
+.fa .km-icon:after,
+.fa .km-icon:before
+{
+    font: 1em/1em 'FontAwesome';
+}
+
+
+.km-fa-user:after,
+.km-fa-user:before
+{
+    content: "\f007";
+}
+
+
+.km-fa-car:after,
+.km-fa-car:before
+{
+    content: "\f1b9";
+}
+
+.km-fa-cog:after,
+.km-fa-cog:before
+{
+    content: "\f013";
+}
+
+.km-fa-wrench:after,
+.km-fa-wrench:before
+{
+    content: "\f0ad";
+}

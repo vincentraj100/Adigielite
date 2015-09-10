@@ -1,0 +1,24 @@
+
+<div class="work-item" id="#=ID#">
+    <div class="position-left">
+    </div>
+    <div class="position-right">
+ </div>
+    <div class="position-center">
+        <div class="itemliststyle-brand">${brand}</div>
+        <ul style="list-style:none;padding-left:12px;">
+         # for (var i=0; i<Job.length; i++) { #
+             <li class="orderjoblist">
+            <span class="fa fa-chevron-right jobicon"></span><span>${Job[i]}</span>
+             </li>
+            # } # 
+        </ul>
+        <div class="orderbutton">
+        <input id="orderedit#=ID#" class="ordersubmit" value="Edit" type="button">
+    </div>
+        </div>
+    <div class="dueon#=ID# commondueon" style="display:none;">Due On: 02-April-2015</div>
+    <div class="downArrow">
+        <a class="expandorder" style="border:none;" data-orderid="#=ID#" data-role="button" > <img src="../../css/images/downArrow.png"  class="orderdownarrow" alt="Mountain View" style=""></a>
+    </div>
+</div>
