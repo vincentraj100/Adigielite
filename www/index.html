@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./kendo/styles/kendo.common.min.css" />
+    <link rel="stylesheet" href="./kendo/styles/kendo.default.min.css" />
+    <link rel="stylesheet" href="./kendo/styles/kendo.dataviz.min.css" />
+    <link rel="stylesheet" href="./kendo/styles/kendo.dataviz.default.min.css" />
+    <link rel="stylesheet" href="./kendo/styles/kendo.mobile.all.min.css" />
+    <link rel="stylesheet" href="./kendo/styles/font-awesome.css" />
+
+    <link rel="stylesheet" href="./kendo/styles/km-fa-font.css" />
+    <link rel="stylesheet" href="./kendo/styles/kendo.mobile.exported_v4.css" />
+    <!--  <link href="./kendo/styles/style.css" rel="stylesheet" />-->
+    <link rel="stylesheet" href="./kendo/styles/main_v2.css" />
+    <!--<link rel="stylesheet" href="./kendo/styles/style.css" />-->
+
+    <script src="./cordova.js"></script>
+    <script data-main="./kendo/js/main" src="./kendo/js/lib/require.min.js"></script>
+
+</head>
+<body>
+    <div id="login"
+        data-role="view"
+        data-title="Sign In"
+        data-transition="slide:left"
+        data-init="window.app.login_load"
+        data-after-show="window.app.login_load">
+        <header data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title"></span>
+            </div>
+        </header>
+        <footer data-role="footer">
+        </footer>
+        <form>
+            <ul data-role="listview" data-style="inset">
+                <li>
+                    <label>
+                        User name
+                                <input id="usr_name" type="text" value="admin" />
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        Password
+                            <input id="usr_password" type="password" value="admin" />
+                    </label>
+                </li>
+                <li>
+                    <i></i><a class="button" data-role="button" data-animated="true" data-icon="action" data-click="window.app.log_click" style="float: right">Login</a>
+                </li>
+            </ul>
+            <div>
+                <a data-role="button" style="display: inline-block; font-size: 13px; border: none !important; background: none !important; text-shadow: none !important; box-shadow: none; text-decoration: underline; color: #f5fe2a !important; margin-left: 20px;" data-click="window.app.forgot_password" href="#" id="usr_forgotpassword">Forgot password?</a>
+                <div data-role="" id="divforgetpass">&nbsp;</div>
+            </div>
+
+        </form>
+    </div>
+
+    <div data-role="layout" data-id="layout">
+        <footer data-role="footer">
+            <div class="fam" data-role="tabstrip" data-selected-index="1">
+                <a href="customer_list" data-icon="fa-user">Customer</a>
+                <a href="garage_list" data-icon="fa-car">InGarage</a>
+                <a href="order_list" data-icon="fa-wrench">Order</a>
+            </div>
+        </footer>
+    </div>
+    <div data-role="drawer" id="my-drawer" style="width: 270px" data-views="['customer_list', 'garage_list','login']">
+        <ul data-role="listview" data-type="group">
+            <li class="fam">Garage
+            <ul id="garage_drawer">
+                <li data-icon="fa-user"><a href="#customer_list" data-transition="none">Customer</a></li>
+                <li data-icon="fa-car"><a href="#garage_list" data-transition="none">Garage</a></li>
+                <li data-icon="fa-cogs"><a href="#order_list" data-transition="none">Order</a></li>
+                <li data-icon="fa-book"><a href="#customer_contancts_list_view" data-transition="none">Phone Contacts</a></li>
+                <li data-icon="fa-power-off"><a href="#login" data-transition="none">logout</a></li>
+            </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div id="customer_list"
+        data-id="customer_list"
+        data-role="view"
+        data-title="Customers"
+        data-init="window.app.load_Customer"
+        data-after-show="window.app.showCustomer">
+        <header data-role="header">
+            <div data-role="navbar" class="fam">
+                <a data-role="button" data-rel="drawer" href="#my-drawer" data-icon="fa-navicon" data-align="left"></a>
+                <span data-role="view-title"></span>
+                <a data-align="right" data-icon="fa-add-plus" data-role="button" data-bind="events: { click: customer_new }">Add</a>
+            </div>
+        </header>
+        <ul data-role="listview" data-style="inset" data-type="group">
+            <li>
+                <ul id="customer_list_ul" >
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div id="garage_list"
+        data-role="view"
+        data-title="Garage"
+        data-transition="slide:left"
+        data-init="window.app.loadInGarage"
+        data-after-show="window.app.showInGarage">
+        <header data-role="header">
+            <div data-role="navbar" class="fam">
+                <a data-role="button" data-rel="drawer" href="#my-drawer" data-icon="fa-navicon" data-align="left"></a>
+                <span data-role="view-title"></span>
+            </div>
+        </header>
+        <ul data-role="listview" data-style="inset" data-type="group">
+            <li>
+                <ul id="garage_list_ul" data-role="listview" data-style="inset">
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div id="order_list"
+        data-role="view"
+        data-title="Orders"
+        data-transition="slide:left"
+        data-init="window.app.loadOrder"
+        data-after-show="window.app.showOrder">
+
+        <header data-role="header">
+            <div data-role="navbar" class="fam">
+                <a data-role="button" data-rel="drawer" href="#my-drawer" data-icon="fa-navicon" data-align="left"></a>
+                <span data-role="view-title"></span>
+                <a data-align="right" data-icon="fa-plus" data-role="button" data-bind="events: { click: order_form_view }">Add</a>
+            </div>
+        </header>
+        <ul data-role="listview" data-style="inset" data-type="group">
+            <li>
+                <div class="itemliststyle">
+                    <ul id="order_list_ul" class="order-list orderList"
+                        data-role="listview" data-style="inset">
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div id="customer_form_view"
+        data-role="view"
+        data-title="Customer"
+        data-transition="slide:right"
+        data-after-show="app.customerService.viewModel.Customer_VehicleList_Refresh">
+        <header data-role="header">
+            <div data-role="navbar" class="fam">
+                <a class="button nav-button backbutton" data-role="backbutton" data-align="left" href="customer_list">Back</a>
+                <span data-role="view-title"></span>
+                <a id="add_customer" class="button" data-role="button" data-icon="fa-plus" data-align="right" data-click="app.customerService.viewModel.customer_save">Add</a>
+            </div>
+        </header>
+        <footer data-role="footer">
+        </footer>
+        <form action="./index.html">
+            <div data-role="scroller" class="scroller-content" style="padding-bottom: 20px;">
+                <ul data-role="listview" data-style="inset" data-type="group">
+                    <li>
+                        <ul>
+                            <li style="display: none;">
+                                <label class="labelname">
+                                    <input type="search" id="id" class="text-input input-style" data-bind="value: id" value="" />
+                                </label>
+                            </li>
+                            <li>
+                                <label class="labelname">
+                                    Name
+                                    <input type="search" id="name" class="text-input input-style" data-bind="value: name" value="" />
+                                </label>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="">
+                            <span class="sub-title">Phone</span>
+                            <i></i><a data-role="button" data-animated="true" data-click="app.customerService.viewModel.load_add_customer_phone_form" class="fam fa-3x special-add-button" data-icon="fa-plus">&nbsp;</a>
+                        </div>
+                        <ul id="customer_phone_list">
+                        </ul>
+                    </li>
+
+                    <li>
+                        <div class="">
+                            <span class="sub-title">E-Mail</span>
+                            <i></i><a data-role="button" data-animated="true" data-click="app.customerService.viewModel.load_add_customer_email_form" class="fam fa-3x special-add-button" data-icon="fa-plus">&nbsp;</a>
+                        </div>
+
+                        <ul id="customer_email_list">
+                        </ul>
+
+                    </li>
+                    <li>
+                        <div class="additemlist">
+                            <span class="sub-title">Vehicle</span>
+                            <i></i><a data-role="button" data-animated="true" data-click="app.customerService.viewModel.add_customer_vehicle" class="fam fa-3x special-add-button" data-icon="fa-plus">&nbsp;</a>
+                        </div>
+                    </li>
+                    <li>
+                        <ul id="vehicle_listview">
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </form>
+    </div>
+
+    <div data-role="view"
+        id="add_customer_vehicle"
+        data-layout="mobile-view"
+        data-title="Vehicle"
+        data-transition="slide:right"
+        data-init="app.customerService.viewModel.Customer_Vehicle_Page_init"
+        data-after-show="app.customerService.viewModel.Customer_Vehicle_Page_RefreshOrder">
+        <header data-role="header">
+            <div data-role="navbar" class="fam">
+                <a class="button nav-button backbutton" data-role="backbutton" data-align="left" href="customer_form_view">Back</a>
+                <span data-role="view-title"></span>
+                <a id="remove_vehicle" class="button" data-role="button" data-icon="fa-minus-sign" data-align="right" data-click="app.customerService.viewModel.remove_customer_vehicle">Delete</a>
+                <a id="add_vehicle" class="button" data-role="button" data-icon="fa-ok" data-align="right" data-click="app.customerService.viewModel.add_vehicle">Done</a>
+            </div>
+        </header>
+        <form action="./index.html">
+            <div data-role="scroller" class="scroller-content" style="padding-bottom: 20px;">
+                <ul id="ExistingVehile" class="customerEdit" data-role="listview" data-style="inset">
+                    <li>
+                        <label class="labelname">
+                            Brand
+                            <input type="search" onclick="load_ddl_item('brand', 'vehicleBrand');" id="vehicleBrand" value="0" readonly="readonly" />
+                        </label>
+                    </li>
+                    <li>
+                        <label class="labelname">
+                            Model
+                            <input type="search" onclick="load_ddl_item('model', 'vehicleModel');" id="vehicleModel" value="0" readonly="readonly" />
+                        </label>
+                    </li>
+                    <li>
+                        <label class="labelname">
+                            Plate
+                        <input type="search" data-bind="value: license_plate" id="vehiclePlateNumber" class="text-input input-style" />
+                        </label>
+                    </li>
+                    <li>
+                        <label class="labelname">
+                            Oil Change
+                            <br />
+                            <input data-bind="value: oil_change_date" id="oil_change_date" style="position: initial;" class="text-input input-style" />
+                        </label>
+                    </li>
+                    <li>
+                        <label class="labelname">
+                            Service Reminder<br />
+                            <input data-bind="value: service_reminder_date" id="service_reminder_date" style="position: initial;" class="text-input input-style" />
+                        </label>
+                    </li>
+                    <li>
+                        <label class="labelname">
+                            Break Pad<br />
+                            <input data-bind="value: breakpad_change_date" id="breakpad_change_date" style="position: initial;" class="text-input input-style" />
+                        </label>
+                    </li>
+                    <li>
+                        <label class="labelname">
+                            Type Change<br />
+                            <input data-bind="value: tyre_change_date" id="tyre_change_date" style="position: initial;" class="text-input input-style" />
+                        </label>
+                    </li>
+                </ul>
+                <ul data-role="listview" data-style="inset" data-type="group">
+                    <li>
+                        <div class="additemlist addProductItems">
+                            <span class="sub-title">Work Order</span>
+                            <i></i><a data-role="button" data-animated="true" data-click="app.customerService.viewModel.load_product_list" class="fam fa-3x special-add-button" data-icon="fa-plus">&nbsp;</a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <ul id="product_based_order_list">
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </form>
+    </div>
+
+    <div data-role="view"
+        id="add_customer_email_form"
+        data-layout="mobile-view"
+        data-title="Email"
+        data-transition="slide:right">
+        <header data-role="header">
+            <div data-role="navbar" class="fam">
+                <a class="button nav-button backbutton" data-role="backbutton" data-align="left" href="#:back">Back</a>
+                <span data-role="view-title"></span>
+                <a id="a2" class="button" data-role="button" data-icon="fa-ok" data-align="right" data-click="app.customerService.viewModel.add_customer_email">Done</a>
+            </div>
+        </header>
+        <form action="./index.html">
+            <div data-role="scroller" class="scroller-content" style="padding-bottom: 20px;">
+                <ul id="email_form" class="customerEdit" data-role="listview" data-style="inset">
+                    <li style="display: none;">
+                        <label class="labelname">
+                            Type
+                            <input id="email_type" type="search" value="Email" class="text-input input-style" readonly />
+                        </label>
+                    </li>
+                    <li>
+                        <label class="labelname">
+                            Mail Id
+                            <input id="mail_id" type="search" value="0" data-bind="value: value" class="text-input input-style" />
+                        </label>
+                    </li>
+                    <li>
+                        <label class="labelname">
+                            Is primary                            
+                            <input id="mail_isprimary" type="checkbox" value="Y" data-bind="checked: isprimary" />
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </form>
+    </div>
+
+    <div data-role="view"
+        id="add_customer_phone_form"
+        data-layout="mobile-view"
+        data-title="Mobile"
+        data-transition="slide:right">
+
+        <header data-role="header">
+            <div data-role="navbar" class="fam">
+                <a class="button nav-button backbutton" data-role="backbutton" data-align="left" href="#:back">Back</a>
+                <span data-role="view-title"></span>
+                <a id="a4" class="button" data-role="button" data-icon="fa-ok" data-align="right" data-click="app.customerService.viewModel.add_customer_phone">Done</a>
+            </div>
+        </header>
+        <form action="./index.html">
+            <div data-role="scroller" class="scroller-content" style="padding-bottom: 20px;">
+                <ul id="phone_form" class="customerEdit" data-role="listview" data-style="inset">
+                    <li>
+                        <label class="labelname">
+                            Type
+                            <input type="search" class="text-input input-style" onclick="load_ddl_item('phone', 'phone_number_type');" id="phone_number_type" value="--select--" />
+                        </label>
+                    </li>
+                    <li>
+                        <label class="labelname">
+                            Number
+                            <input id="number" type="search" value="" data-bind="value: value" class="text-input input-style" />
+                        </label>
+                    </li>
+                    <li>
+                        <label class="labelname">
+                            Is primary                            
+                            <input id="phone_isprimary" type="checkbox" value="Y" data-bind="checked: isprimary" />
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </form>
+    </div>
+
+    <!-- order create -->
+    <div id="order_form_view"
+        data-role="view"
+        data-title="Order"
+        data-init="app.ordersService.viewModel.load_customer_order_form"
+        data-transition="slide:right"
+        data-after-show="app.ordersService.viewModel.Order_Page_JobRefresh"
+        data-before-hide="app.ordersService.viewModel.Order_Page_Hide">
+        <header data-role="header">
+            <div data-role="navbar" class="fam">
+                <a class="nav-button backbutton" data-align="left" href="order_list" data-role="backbutton">Back</a>
+                <span data-role="view-title"></span>
+                <a id="add_order" class="button" data-role="button" data-icon="fa-ok" data-align="right" data-click="app.ordersService.viewModel.add_new_order">Add</a>
+                <a id="update_order" class="button fa" data-role="button" data-icon="fa-ok" data-align="right" style="display: none;" data-click="app.ordersService.viewModel.add_new_order">Done</a>
+            </div>
+        </header>
+        <footer data-role="footer">
+        </footer>
+        <form action="./index.html">
+            <div data-role="scroller" class="scroller-content" style="padding-bottom: 20px;">
+
+                <ul data-role="listview" data-style="inset" data-type="group">
+                    <li>
+                        <ul id="add_customer_order_ul" class="customerEdit">
+                            <li>
+                                <label class="labelname">
+                                    Name
+                            <input type="search" id="order_name" class="text-input input-style" data-bind="value: order_name" value="" readonly="readonly" />
+                                </label>
+                            </li>
+                            <li>
+                                <label class="labelname">
+                                    Customer
+                            <input type="search" class="text-input input-style" onclick="load_ddl_item('customer', 'customer_ddl_list');" id="customer_ddl_list" value="0" readonly="readonly" />
+                                </label>
+                            </li>
+                            <li>
+                                <label class="labelname">
+                                    Vechicle
+                            <input type="search" class="text-input input-style" onclick="load_ddl_item('vehicle', 'vehicle_ddl_list');" id="vehicle_ddl_list" value="0" readonly="readonly" />
+                                </label>
+                            </li>
+                            <li>
+                                <label class="labelname">
+                                    Status
+                            <input type="search" class="text-input input-style" onclick="load_ddl_item('status', 'status_ddl_list');" id="status_ddl_list" value="0" />
+                                </label>
+                            </li>
+
+                            <li>
+                                <label class="labelname">
+                                    Estimation Cost
+                            <input type="search" id="estimation_cost" class="text-input input-style" data-bind="value: estimation_cost" value="" />
+                                </label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="new_task_block" style="margin-top: 30px; text-align: left; display: none;">
+                            <span class="sub-title">Tasks</span>
+                            <i></i><a data-role="button" data-animated="true" data-click="app.ordersService.viewModel.load_product_list_from_orders" class="fam fa-3x special-add-button" data-icon="fa-plus">&nbsp;</a>
+
+                        </div>
+                    </li>
+                    <li>
+                        <ul id="order_task_list"></ul>
+                    </li>
+                </ul>
+
+            </div>
+        </form>
+    </div>
+
+    <!-- create new task -->
+    <div id="add_new_task_form" class="appearance-job"
+        data-role="view"
+        data-title="Job"
+        data-use-native-scrolling="true"
+        data-init="app.ordersService.viewModel.load_order_job_form"
+        data-after-show="app.ordersService.viewModel.regresh_add_new_task_form"
+        data-transition="slide:left">
+        <header data-role="header">
+            <div data-role="navbar" class="fam">
+                <a class="nav-button backbutton" data-align="left" data-role="backbutton" href="order_form_view">Back</a>
+                <span data-role="view-title"></span>
+                <a id="remove_task" class="button" data-role="button" data-icon="fa-minus-sign" data-align="right" data-click="app.ordersService.viewModel.remove_job_from_order">Delete</a>
+                <a id="add_task" class="button" data-role="button" data-icon="fa-plus" data-align="right" data-click="app.ordersService.viewModel.add_new_task">Add</a>
+            </div>
+        </header>
+        <footer data-role="footer">
+            <div class="fam" data-role="tabstrip" data-selected-index="1">
+                <a data-icon="fa-user" data-role="backbutton">WorkOrder</a>
+                <a href="garage_list" data-icon="fa-car">Image</a>
+            </div>
+        </footer>
+        <form action="./index.html">
+            <div data-role="scroller" class="scroller-content" style="padding-bottom: 20px;">
+                <ul id="add_order_job_ul" class="customerEdit" data-role="listview" data-style="inset">
+                    <li>
+                        <label class="labelname">
+                            Product Type
+                        </label>
+                        <br />
+                        <input type="search" class="text-input input-style" id="product_type_ddl_list_name" data-bind="value: product_name" />
+                    </li>
+                    <li>
+                        <label class="labelname">
+                            Estimated Cost 
+                        </label>
+                        <br />
+                        <input type="search" id="job_estimation_cost" style="position: initial;" class="text-input input-style" data-bind="value: estimated_cost" value="" />
+                    </li>
+                    <li>
+                        <label class="labelname">
+                            Estimated Finish Date                        
+                        </label>
+                        <br />
+                        <input class="text-input input-style" id="estimated_finish_date" style="position: initial;" data-bind="value: estimated_finish_time" />
+                    </li>
+                    <li>
+                        <label class="labelname">
+                            Actual Cost   
+                        </label>
+                        <br />
+                        <input type="search" id="actual_cost" class="text-input input-style" style="position: initial;" data-bind="value: actual_cost" value="" />
+                    </li>
+                    <li>
+                        <label class="labelname">
+                            Actual Finish Date 
+                        </label>
+                        <br />
+                        <input class="text-input input-style" id="actual_finish_date" style="position: initial;" data-bind="value: actual_finish_time" />
+                    </li>
+                </ul>
+
+                <ul data-role="listview" data-style="inset" data-type="group">
+                    <li>
+                        <div class="additemlist subproductcontent">
+                            <span class="sub-title">Serivce Items</span>
+                            <i></i><a id="link_sub_product_load" data-role="button" data-animated="true" data-click="app.ordersService.viewModel.load_sub_product_list" class="fam fa-3x special-add-button" data-icon="fa-plus">&nbsp;</a>
+                        </div>
+                    </li>
+                    <li>
+                        <ul id="sub_product_list_edit_ul">
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </form>
+    </div>
+
+    <div id="order_list_by_vehicle"
+        data-role="view"
+        data-title="Orders"
+        data-transition="slide:left"
+        data-init="window.app.loadOrder"
+        data-after-show="window.app.showOrder">
+
+        <header data-role="header">
+            <div data-role="navbar">
+                <a class="button nav-button backbutton" data-role="backbutton" data-align="left" href="#:back">Back</a>
+                <span data-role="view-title"></span>
+                <a data-align="right" data-icon="add" data-role="button" data-bind="events: { click: order_form_view }">Add</a>
+            </div>
+        </header>
+
+        <div>
+            <label class="labelname vehicle_name">
+                Estimated Finish Date                        
+            </label>
+
+            <label class="labelname vehicle_name">
+                Estimated Finish Date                        
+                <a class="button nav-button backbutton" data-role="backbutton" data-align="center" href="order_form_view">Orders </a>
+            </label>
+        </div>
+        <ul data-role="listview" data-style="inset" data-type="group">
+            <li>
+                <div class="itemliststyle">
+                    <ul id="customer_order_list_by_vehicle" class="order-list orderList"
+                        data-role="listview" data-style="inset">
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div id="product_list"
+        data-id="customer_list"
+        data-role="view"
+        data-title="Service List"
+        data-after-show="window.app.showproduct"
+        data-before-hide="app.Productlist_Page_Hide">
+        <header data-role="header">
+            <div data-role="navbar">
+                <a class="button nav-button backbutton" data-role="backbutton" data-align="left" href="order_form_view">Back</a>
+                <span data-role="view-title"></span>
+            </div>
+        </header>
+        <footer data-role="footer">
+        </footer>
+        <ul data-role="listview" data-style="inset" data-type="group">
+            <li>
+                <ul id="product_list_ul">
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div id="sub_products_list"
+        data-id="sub_product_list"
+        data-role="view"
+        data-title="Sub Service List">
+        <header data-role="header">
+            <div data-role="navbar">
+                <a class="button nav-button backbutton" data-role="backbutton" data-align="left" href="product_list">Back</a>
+                <span data-role="view-title"></span>
+            </div>
+        </header>
+        <footer data-role="footer">
+        </footer>
+        <ul data-role="listview" data-style="inset" data-type="group">
+            <li>
+                <ul id="sub_product_list_ul">
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div id="dropdownListView"
+        data-id="dropdown_list_view"
+        data-role="view"
+        data-title="Select">
+        <header data-role="header">
+            <div data-role="navbar">
+                <a class="button nav-button backbutton" data-role="backbutton" data-align="left" href="#:back">Back</a>
+                <span data-role="view-title"></span>
+            </div>
+        </header>
+        <footer data-role="footer">
+        </footer>
+        <ul data-role="listview" data-style="inset" data-type="group">
+            <li id="dropdown_list_item_list_ul_parent">
+                <!-- <ul id="dropdown_list_item_list_ul"></ul>-->
+            </li>
+        </ul>
+    </div>
+
+
+    <div id="Div1"
+        data-id="sub_product_list"
+        data-role="view"
+        data-title="Products">
+        <header data-role="header">
+            <div data-role="navbar">
+                <a class="button nav-button backbutton" data-role="backbutton" data-align="left" href="#:back">Back</a>
+                <span data-role="view-title"></span>
+            </div>
+        </header>
+        <footer data-role="footer">
+        </footer>
+        <ul data-role="listview" data-style="inset" data-type="group">
+            <li>
+                <ul id="Ul1">
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+
+    <div id="customer_contancts_list_view"
+        data-id="customer_contancts_list_view"
+        data-role="view"
+        data-title="Customers"
+        data-init="window.app.load_Customer_contacts"
+        data-after-show="window.app.showCustomer_contacts">
+        <header data-role="header">
+            <div data-role="navbar" class="fam">
+                <a data-role="button" data-rel="drawer" href="#my-drawer" data-icon="fa-navicon" data-align="left"></a>
+                <span data-role="view-title"></span>
+                <a data-align="right" data-icon="fa-add-plus" data-role="button" data-bind="events: { click: customer_new }">Add</a>
+            </div>
+        </header>
+
+        <ul data-role="listview" data-style="inset" data-type="group">
+            <li>
+                <ul id="ul_customer_contancts_list_view">
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>

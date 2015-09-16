@@ -1,0 +1,140 @@
+
+.km-ios
+{
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-size: 1em;
+    line-height: normal;
+    font-family: play, 'Roboto Light', 'Slate Light', 'Segoe WP', NokiaPureTextLight, sans-serif;
+}
+
+    .km-ios .km-view .km-content .km-listgroupinset .km-group-title
+    {
+        color: rgb(229, 229, 229);
+    }
+
+    .km-ios .km-view .km-navbar
+    {
+        background-color: rgb(255, 255, 255);
+    }
+
+        .km-ios .km-view .km-navbar .km-button .km-text
+        {
+            color: rgb(255, 255, 255);
+        }
+
+        .km-ios .km-view .km-navbar .km-button.km-state-active .km-text
+        {
+            color: rgb(255, 255, 255);
+        }
+
+    .km-ios .km-view .km-content .km-listgroupinset .km-group-title .km-text
+    {
+        color: rgb(0, 0, 0);
+    }
+
+    .km-ios .km-view .km-tabstrip .km-state-active span.km-icon
+    {
+        color: rgb(255, 102, 0);
+    }
+
+    .km-ios .km-view .km-content
+    {
+        font-family: play;
+        font-size: 1em;
+        font-weight: normal;
+        font-style: normal;
+        line-height: normal;
+        text-shadow: none;
+        background-color: rgb(137, 153, 130);
+    }
+
+        .km-ios .km-view .km-content .km-button
+        {
+            background-color: rgb(15, 143, 0);
+        }
+
+            .km-ios .km-view .km-content .km-button.km-state-active
+            {
+                background-color: rgb(254, 197, 0);
+            }
+
+                .km-ios .km-view .km-content .km-button.km-state-active .km-text
+                {
+                    color: rgb(25, 25, 25);
+                }
+
+        .km-ios .km-view .km-content .km-list .km-state-active .km-listview-link
+        {
+            background-color: rgb(15, 143, 0);
+        }
+
+    .km-ios .km-view .km-navbar .km-button.km-state-active
+    {
+        background-color: rgb(15, 143, 0);
+    }
+
+    .km-ios .km-view .km-tabstrip .km-button .km-icon
+    {
+        color: rgb(15, 153, 0);
+    }
+
+    .km-ios .km-view .km-content .km-list > li .km-switch .km-switch-container
+    {
+        background-color: rgb(4, 61, 0);
+    }
+
+    .km-ios .km-view .km-navbar .km-view-title > * .km-button.km-state-active
+    {
+        background-color: rgb(15, 143, 0);
+    }
+
+    .km-ios .km-view .km-navbar .km-view-title > *
+    {
+        color: rgb(24, 81, 20);
+    }
+
+    .km-ios .km-view .km-content .km-button .km-text
+    {
+        color: rgb(255, 255, 255);
+    }
+
+    .km-ios .km-view .km-tabstrip .km-button .km-text
+    {
+        color: rgb(24, 81, 20);
+    }
+
+    .km-ios .k-list, .km-ios .k-slider, .km-ios .km-widget
+    {
+        color: rgb(24, 81, 20);
+    }
+
+    .km-ios .km-view .km-navbar .km-button
+    {
+        background-color: rgb(15, 143, 0);
+    }
+
+
+    .km-ios .km-tabstrip .km-state-active .km-icon
+    {
+        background-image: none;
+    }
+
+    .km-ios .km-tabstrip .km-icon
+    {
+        background-image: none;
+    }
+
+    .km-ios .km-tabstrip
+    {
+        background-color: white;
+    }
+
+
+    .km-ios .km-insetcontent
+    {
+        /*background: #7E867C url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAABCAYAAAASC7TOAAAAGklEQVR4Xm3DMREAAACCQKPYvySeO8MHML0BOrEVLMJmdzAAAAAASUVORK5CYII=");*/
+        background-image:url('images/strip.png');
+    }

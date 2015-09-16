@@ -1,0 +1,45 @@
+<div class="work-item" id="#=id#" data-orderid="#=id#">
+    <div class="position-left" onclick="load_selected_orderDetail(this)" data-orderid="#=id#">
+        <img src="#=host#web/binary/image?model=fleet.vehicle&id=${vehicle_id}&field=vehicle_image&t=1431446857606" style="height: 50px; width: 50px; margin-right: 1em;" />
+    </div>
+    <div class="position-right">
+    </div>
+    <div class="position-center" onclick="load_selected_orderDetail(this)" data-orderid="#=id#">
+        <div>${name}</div>
+        <table>
+            <tr class="itemliststyle-brand">
+                <td>
+                    <div style="margin-top: 5px; font-weight: normal;">${vehicle_name}</div>
+                </td>
+            </tr>
+            <tr class="commondueon">
+                <td>
+                    <div class="dueon#=id# commondueon">
+                        #if (estimated_task_finish_time!=false) {
+                            var estimated_task_finish_time_date=kendo.parseDate(estimated_task_finish_time);
+                        #
+                            <span>#=kendo.toString(estimated_task_finish_time_date,"dd-MMM-yyyy")#</span>
+                        #}else{#
+                            <span>NA</span>
+                        #}#  
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <div class="jobtext jobtext#=id#" style="display: none;">
+            <span>Jobs:</span>
+            <ul class="job_list order_job_list_item order_job_list_item#=id#">
+            </ul>
+        </div>
+
+        <!--  <div class="orderbutton">
+            <a id="orderedit#=id#" data-rel="actionsheet" data-orderid="#=id#" class="order_item_view" data-role="button" data-animated="true" data-icon="action" data-click="window.app.ordersService.viewModel.edit_order" style="float: right; margin-top: -15px; color: white; font-weight: bold;">Edit</a>
+        </div>-->
+    </div>
+
+    <div class="downArrow">
+        <i></i><a data-role="button" id="orderdownarrow#=id#" data-orderid="#=id#" data-animated="true" data-click="app.ordersService.viewModel.order_detail_view" class="orderdownarrow#=id#  special-add-button special-button-1x special-more" data-icon="more">&nbsp;</a>
+    </div>
+</div>
+<a id="orderedit#=id#" data-orderid="#=id#" data-role="detailbutton" data-style="detaildisclose" data-rel="actionsheet" data-click="window.app.ordersService.viewModel.edit_order"></a>

@@ -1,0 +1,135 @@
+﻿
+@font-face {
+  font-family: 'play'; 
+  src: url('fonts/Play-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+ 
+@font-face {
+  font-family: 'Raleway'; 
+  src: url('fonts/Raleway-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+ 
+
+.mg-nav .fa
+{
+    line-height: 22px;
+}
+
+
+.fam .km-icon:after,
+.fam .km-icon:before
+{
+    font: 1em/1em 'FontAwesome';
+}
+
+
+.km-fa-user:after,
+.km-fa-user:before
+{
+    content: "\f007";
+}
+
+
+.km-fa-car:after,
+.km-fa-car:before
+{
+    content: "\f1b9";
+}
+
+.km-fa-cog:after,
+.km-fa-cog:before
+{
+    content: "\f013";
+}
+
+.km-fa-wrench:after,
+.km-fa-wrench:before
+{
+    content: "\f0ad";
+}
+
+.km-fa-plus:after,
+.km-fa-plus:before
+{
+    content: "\f055";
+}
+
+.km-fa-down:after,
+.km-fa-down:before
+{
+    content: "\f078";
+}
+
+.km-fa-up:after,
+.km-fa-up:before
+{
+    content: "\f077";
+}
+
+.km-fa-save:after,
+.km-fa-save:before
+{
+  content: "\f0c7";
+}
+
+.km-fa-check:after,
+.km-fa-check:before
+{
+  content: "\f00c";
+}
+
+
+.km-fa-navicon:after,
+.km-fa-navicon:before
+{
+  content: "\f0c9";
+}
+
+.km-fa-add-plus:after,
+.km-fa-add-plus:before
+{
+  content: "\f067";
+}
+
+.km-fa-power-off:after,
+.km-fa-power-off:before
+{
+  content: "\f011";
+}
+
+
+.km-fa-cogs:after,
+.km-fa-cogs:before
+{
+  content: "\f085";
+}
+
+
+.km-fa-ok:after,
+.km-fa-ok:before
+{
+  content: "\f00c";
+}
+
+
+.km-fa-trash:after,
+.km-fa-trash:before
+{
+  content: "\f014";
+}
+
+.km-fa-minus-sign:after,
+.km-fa-minus-sign:before
+{
+  content: "\f056";
+}
+
+.km-fa-book:after,
+.km-fa-book:before
+{
+  content: "\f02d";
+}

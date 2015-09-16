@@ -1,0 +1,8 @@
+﻿<div class="phone-email">
+    # if (isprimary == "Y" || isprimary ==true) { #
+    <input name="radio#=category#" data-id="chk#=id#" style="display:inline-block;width:20px;height:20px;" type="radio" data-value="#=isprimary#"  checked="checked" value="Y"  class="km-widget km-icon km-check" />
+    # } else { #
+      <input name="radio#=category#"  data-id="chk#=id#" style="display:inline-block;width:20px;height:20px;" type="radio" data-value="#=isprimary#"  value="Y"  class="km-widget km-icon"   />
+    #}#
+    <input style="display:inline-block;margin-left:20px;"  data-id="#=id#" data-name="#=name#" data-type="#=category#" data-customer-id="#=partner_id[0]#" type="text" value="#=value#" /><a data-id="#=id#" data-role="detailbutton" data-style="rowdelete" data-rel="actionsheet" data-name="#=name#" data-value="#=value#" data-type="#=category#" data-click="app.customerService.viewModel.remove_customer_email_or_phone"></a>
+</div>
